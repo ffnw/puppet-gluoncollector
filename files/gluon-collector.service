@@ -1,0 +1,12 @@
+[Unit]
+Description=Gluon-Collector
+After=network.target auditd.service
+
+[Service]
+ExecStart=/opt/gluon-collector/bin/gluon-collector
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=gluon-collector.service

@@ -12,6 +12,10 @@ class gluoncollector::install inherits gluoncollector {
       ensure => file,
       mode   => '0744',
       source => 'puppet:///modules/gluoncollector/gluon-collector';
+    '/etc/systemd/system/gluon-collector.service':
+      ensure => file,
+      mode   => '0644',
+      source => 'puppet:///modules/gluoncollector/gluon-collector.service';
   }
 
 }
