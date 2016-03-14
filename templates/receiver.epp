@@ -1,0 +1,8 @@
+<%- | $type,
+      $interface,
+      $port,
+| -%>
+- type: "<%= $type %>"
+  interface: "<%= $interface %>"
+  port: <%= $port %>
+

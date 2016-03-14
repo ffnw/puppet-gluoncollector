@@ -1,0 +1,37 @@
+<%- | $interval_statistics,
+      $interval_nodeinfo,
+      $interval_expire,
+      $logger_level,
+      $logger_file,
+      $store_type,
+      $store_path,
+      $store_expireNodesAfterDays,
+      $http_port,
+      $http_address,
+      $prometheus_namelabel,
+      $prometheus_sitecodelabel,
+| -%>
+interval:
+  statistics: <%= $interval_statistics %>
+  nodeinfo: <%= $interval_nodeinfo %>
+  expire: <%= $interval_expire %>
+
+logger:     
+  level: "<%= $logger_level %>"
+  file: "<%= $logger_file %>"
+
+store:
+  type: "<%= $store_type %>"
+  path: "<%= $store_path %>"
+  expireNodesAfterDays: <%= $store_expireNodesAfterDays %>
+
+http:             
+  port: <%= $http_port %>
+  address: "<%= $http_address %>"
+
+prometheus:
+  namelabel: <%= $prometheus_namelabel %>
+  sitecodelabel: <%= $prometheus_sitecodelabel %>
+
+receiver:
+
