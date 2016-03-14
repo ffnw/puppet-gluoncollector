@@ -8,7 +8,7 @@ class gluoncollector::config inherits gluoncollector {
   concat::fragment { 'gluoncollector-mainconf':
     target  => '/etc/node-collector.yaml',
     order   => 0,
-    content => epp('config.epp', {
+    content => epp('gluoncollector/config.epp', {
       interval_statistics        => $interval_statistics,
       interval_nodeinfo          => $interval_nodeinfo,
       interval_expire            => $interval_expire,
@@ -21,7 +21,7 @@ class gluoncollector::config inherits gluoncollector {
       http_address               => $http_address,
       prometheus_namelabel       => $prometheus_namelabel,
       prometheus_sitecodelabel   => $prometheus_sitecodelabel,
-    },
+    })
   }
 
 }

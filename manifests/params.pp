@@ -8,7 +8,7 @@ class gluoncollector::params {
   $logger_file  = '/var/log/gluon-collector.log'
 
   $store_type                 = 'bolt'
-  $store_path                 = '/opt/gluon-collector/collector.db
+  $store_path                 = '/opt/gluon-collector/collector.db'
   $store_expireNodesAfterDays = 365
 
   $http_port    = 8079

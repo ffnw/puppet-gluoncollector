@@ -10,11 +10,11 @@ define gluoncollector::receiver (
   concat::fragment { 'gluoncollector-mainconf':
     target  => '/etc/node-collector.yaml',
     order   => 1,
-    content => epp('receiver.epp', {
-      type      => $type,
+    content => epp('gluoncollector/receiver.epp', {
+      'type'    => $type,
       interface => $interface,
       port      => $port,
-    },
+    })
   }
 
 }
