@@ -7,7 +7,7 @@ define gluoncollector::receiver (
   include gluoncollector
   include gluoncollector::params
 
-  concat::fragment { 'gluoncollector-mainconf':
+  concat::fragment { "gluoncollector-receiver-${title}":
     target  => '/etc/node-collector.yaml',
     order   => 1,
     content => epp('gluoncollector/receiver.epp', {
