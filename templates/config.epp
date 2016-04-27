@@ -11,10 +11,11 @@
       $prometheus_namelabel,
       $prometheus_sitecodelabel,
 | -%>
-interval:
-  statistics: <%= $interval_statistics %>
-  nodeinfo: <%= $interval_nodeinfo %>
-  expire: <%= $interval_expire %>
+announced:
+  interval:
+    statistics: <%= $interval_statistics %>
+    nodeinfo: <%= $interval_nodeinfo %>
+    expire: <%= $interval_expire %>
 
 logger:     
   level: "<%= $logger_level %>"
